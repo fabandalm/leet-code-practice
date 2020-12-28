@@ -1,5 +1,8 @@
 package com.falmeida.tech.trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class TreeNode{
     int value;
     TreeNode left, right;
@@ -34,18 +37,35 @@ public class BinaryTreeSamples {
         return current;
     }
 
-    public BinaryTreeSamples createBinaryTree() {
+    public BinaryTreeSamples createBinaryTree(){
         BinaryTreeSamples bt = new BinaryTreeSamples();
-
-        bt.add(6);
-        bt.add(4);
-        bt.add(8);
-        bt.add(3);
-        bt.add(5);
-        bt.add(7);
-        bt.add(9);
-
+        bt = bt.createBinaryTree();
         return bt;
+    }
+
+    //Breadth-First Search
+    public void traverseLevelOrder() {
+        if (root == null) {
+            return;
+        }
+
+        Queue<TreeNode> nodes = new LinkedList<>();
+        nodes.add(root);
+
+        while (!nodes.isEmpty()) {
+
+            TreeNode node = nodes.remove();
+
+            System.out.print(" " + node.value);
+
+            if (node.left != null) {
+                nodes.add(node.left);
+            }
+
+            if (node.right != null) {
+                nodes.add(node.right);
+            }
+        }
     }
 
     public boolean containsNode(int value) {
@@ -62,6 +82,18 @@ public class BinaryTreeSamples {
         return value < current.value
                 ? containsNodeRecursive(current.left, value)
                 : containsNodeRecursive(current.right, value);
+    }
+
+    public static void main(String[] args) {
+        BinaryTreeSamples bt = new BinaryTreeSamples();
+        bt.add(6);
+        bt.add(4);
+        bt.add(8);
+        bt.add(3);
+        bt.add(5);
+        bt.add(7);
+        bt.add(9);
+        bt.traverseLevelOrder();
     }
 
 }
