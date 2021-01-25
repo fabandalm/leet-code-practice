@@ -1,4 +1,4 @@
-package com.falmeida.tech.algorythms;
+package com.falmeida.tech.algorithms;
 
 public class DPSample {
 
