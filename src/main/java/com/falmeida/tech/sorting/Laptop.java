@@ -1,10 +1,16 @@
 package com.falmeida.tech.sorting;
 
-public class Laptop {
+public class Laptop implements Comparable<Laptop>{
 
     private String brand;
     private int ram;
     private int price;
+
+    public Laptop(String brand, int ram, int price) {
+        this.brand = brand;
+        this.ram = ram;
+        this.price = price;
+    }
 
     public String getBrand() {
         return brand;
@@ -37,5 +43,14 @@ public class Laptop {
                 ", ram=" + ram +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Laptop laptop) {
+        if(this.getRam() > laptop.getRam()){
+            return 1;
+        }else{
+            return -1;
+        }
     }
 }
