@@ -38,11 +38,7 @@ public class Laptop implements Comparable<Laptop>{
 
     @Override
     public String toString() {
-        return "Laptop{" +
-                "brand='" + brand + '\'' +
-                ", ram=" + ram +
-                ", price=" + price +
-                '}';
+        return "Laptop{" + "brand='" + brand + '\'' + ", ram=" + ram + ", price=" + price + '}';
     }
 
     @Override

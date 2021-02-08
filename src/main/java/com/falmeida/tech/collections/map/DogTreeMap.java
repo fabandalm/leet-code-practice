@@ -13,10 +13,10 @@ public class DogTreeMap {
         Dog d4 = new Dog("white", 10);
 
         Map<Dog, Integer> dogTreeMap = new TreeMap();
-        dogTreeMap.put(d1, 10);
+        //dogTreeMap.put(d1, 10);
         dogTreeMap.put(d2, 15);
-        dogTreeMap.put(d3, 5);
-        //dogTreeMap.put(d4, 20);
+        //dogTreeMap.put(d3, 5);
+        dogTreeMap.put(d4, 20);
 
         for(Map.Entry entry: dogTreeMap.entrySet()){
             System.out.println(entry.getKey().toString() + " - " + entry.getValue());
