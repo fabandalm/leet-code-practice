@@ -23,7 +23,7 @@ public class Cat {
         return "Cat{" + "color='" + color + '\'' + '}';
     }
 
-    @Override
+    /*@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -34,6 +34,6 @@ public class Cat {
     @Override
     public int hashCode() {
         return Objects.hash(color);
-    }
+    }*/
 
 }
