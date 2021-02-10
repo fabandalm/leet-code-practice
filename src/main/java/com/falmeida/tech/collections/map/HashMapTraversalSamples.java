@@ -31,6 +31,8 @@ public class HashMapTraversalSamples {
         //Streams
         map.entrySet().stream().forEach(e -> System.out.println(e.getKey() + ", " + e.getValue()));
 
+        System.out.println(map.get(1));
+
     }
 
 }
